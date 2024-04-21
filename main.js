@@ -182,7 +182,6 @@ async function buildApp() {
       "rounded-full",
       "h-2.5",
       "self-center",
-      "dark:bg-gray-950",
       "absolute",
       "bottom-[55px]"
     );
@@ -301,7 +300,6 @@ searchInput.addEventListener("keyup", () => {
       "rounded-full",
       "h-2.5",
       "self-center",
-      "dark:bg-gray-950",
       "absolute",
       "bottom-[55px]"
     );

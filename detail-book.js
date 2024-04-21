@@ -98,8 +98,7 @@ async function buildApp() {
     "w-full",
     "bg-gray-400",
     "rounded-full",
-    "h-2.5",
-    "dark:bg-gray-950"
+    "h-2.5"
   );
   progressValue.classList.add(
     "bg-indigo-500",
