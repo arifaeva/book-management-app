@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Management App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900">
+    <main class="w-[1320px] m-auto my-12 space-y-4">
+      <h1 class="text-5xl font-bold font-inter text-white text-center py-5">
+        Welcome to Your Digital Library!
+      </h1>
+      <div class="flex justify-between items-center">
+        <img src="assets/main page.svg" width="800px" height="200px" />
+
+        <form
+          id="form"
+          class="bg-gray-800 p-5 rounded-3xl space-y-4 w-[600px] shadow-lg"
+        >
+          <h1 class="text-3xl font-bold font-inter text-white">
+            Input Your Book Here!
+          </h1>
+          <input
+            id="bookTitle"
+            name="bookTitle"
+            placeholder="Book Title"
+            class="block w-full border p-2 rounded-lg"
+          />
+          <div class="space-y-2">
+            <input
+              id="bookRating"
+              name="bookRating"
+              placeholder="Book Rating (from 0 to 5)"
+              class="block w-full border p-2 rounded-lg"
+            />
+            <p class="w-full text-sm text-white">
+              *You can leave it empty if you haven't finished reading yet
+            </p>
+          </div>
+          <div class="flex justify-between items-center">
+            <label for="bookCategory" class="w-48 text-white"
+              >Reading Status</label
+            >
+            <select
+              id="bookCategory"
+              name="bookCategory"
+              class="block w-full border p-2 rounded-lg"
+            >
+              <option value="I've read it all!">I've read it all!</option>
+              <option value="Reading">Reading</option>
+              <option value="Gave up">Gave up</option>
+              <option value="Want to read">Want to read</option>
+            </select>
+          </div>
+
+          <input
+            id="bookAuthor"
+            name="bookAuthor"
+            placeholder="Book Author"
+            class="block w-full border p-2 rounded-lg"
+          />
+          <input
+            id="bookYear"
+            name="bookYear"
+            placeholder="Published Year"
+            class="block w-full border p-2 rounded-lg"
+          />
+          <input
+            id="bookPublisher"
+            name="bookPublisher"
+            placeholder="Book Publisher"
+            class="block w-full border p-2 rounded-lg"
+          />
+          <input
+            id="bookCover"
+            name="bookCover"
+            type="url"
+            placeholder="Book Cover (input image url)"
+            class="block w-full border p-2 rounded-lg"
+          />
+          <textarea
+            id="bookDesc"
+            name="bookDesc"
+            rows="8"
+            placeholder="Book Description"
+            class="block w-full border p-2 rounded-lg"
+          ></textarea>
+          <button
+            class="bg-lime-600 text-white rounded-lg p-2 font-medium hover:shadow-lg"
+          >
+            Add Book
+          </button>
+        </form>
+      </div>
+      <main class="w-full bg-gray-800 rounded-3xl p-5 shadow-lg space-y-4">
+        <h1 class="text-3xl font-bold font-inter text-white">Your Catalog</h1>
+        <input
+          id="searchInput"
+          type="text"
+          class="block w-full border p-2 rounded-lg"
+          placeholder="Search Title"
+        />
+        <div
+          id="catalogContainer"
+          class="grid grid-cols-5 items-center justify-items-center m-auto gap-6"
+        >
+          <!-- <div class="w-60 h-80 relative bg-rose-400 rounded-2xl">
+          <div class="bg-rose-400 h-[55%] space-y-1 rounded-t-2xl"></div>
+
+          <div class="bg-gray-700 h-[45%] space-y-1 rounded-2xl px-3 pt-8">
+            <h4 class="text-sm text-white font-inter font-semibold">
+              The Boy, the Mole, the Fox, and the Horse
+            </h4>
+            <h5 class="text-white font-inter text-xs">Charlie McKansey</h5>
+            <div class="pt-2">
+              <a
+                class="bg-rose-400 rounded-lg font-inter font-semibold p-1.5 text-sm text-white"
+                >See more</a
+              >
+            </div>
+          </div>
+
+          <img
+            src="cover1.jpg"
+            width="140px"
+            height="100px"
+            class="absolute bottom-[120px] left-2 rounded-3xl"
+          />
+        </div> -->
+        </div>
+      </main>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

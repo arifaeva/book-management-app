@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900">
+    <main
+      class="w-[800px] m-auto my-8 space-y-6 bg-gray-800 rounded-3xl p-8 shadow-lg"
+    >
+      <div class="block w-full gap-x-3 flex justify-end">
+        <a
+          id="homeBtn"
+          class="bg-indigo-500 rounded-xl text-white p-2 font-medium"
+        >
+          Home
+        </a>
+        <a
+          id="backBtn"
+          class="bg-orange-400 rounded-xl text-white p-2 font-medium"
+        >
+          Back to Book Page
+        </a>
+        <button
+          id="deleteBtn"
+          class="bg-red-500 rounded-xl text-white p-2 font-medium"
+        >
+          Delete Book
+        </button>
+      </div>
+      <form id="editForm" class="space-y-4">
+        <input
+          id="bookTitle"
+          name="bookTitle"
+          placeholder="Book Title"
+          class="block w-full border p-2 rounded-lg"
+        />
+        <div class="space-y-2">
+          <input
+            id="bookRating"
+            name="bookRating"
+            placeholder="Book Rating (from 0 to 5)"
+            class="block w-full border p-2 rounded-lg"
+          />
+          <p class="w-96 text-sm text-white">
+            *You can leave it empty if you haven't finished reading yet
+          </p>
+        </div>
+        <div class="flex jutify-between items-center">
+          <label for="bookCategory" class="w-48 text-white"
+            >Reading Status</label
+          >
+          <select
+            id="bookCategory"
+            name="bookCategory"
+            class="block w-full border p-2 rounded-lg"
+          >
+            <option value="I've read it all!">I've read it all!</option>
+            <option value="Reading">Reading</option>
+            <option value="Gave up">Gave up</option>
+            <option value="Want to read">Want to read</option>
+          </select>
+        </div>
+        <input
+          id="bookAuthor"
+          name="bookAuthor"
+          placeholder="Book Author"
+          class="block w-full border p-2 rounded-lg"
+        />
+        <input
+          id="bookYear"
+          name="bookYear"
+          placeholder="Published Year"
+          class="block w-full border p-2 rounded-lg"
+        />
+        <input
+          id="bookPublisher"
+          name="bookPublisher"
+          placeholder="Book Publisher"
+          class="block w-full border p-2 rounded-lg"
+        />
+        <input
+          id="bookCover"
+          name="bookCover"
+          type="url"
+          placeholder="Book Cover (input image url)"
+          class="block w-full border p-2 rounded-lg"
+        />
+        <textarea
+          id="bookDesc"
+          name="bookDesc"
+          rows="8"
+          placeholder="Book Description"
+          class="block w-full border p-2 rounded-lg"
+        ></textarea>
+        <button class="bg-sky-600 text-white font-medium rounded-lg p-2">
+          Edit Book
+        </button>
+      </form>
+    </main>
+    <script src="edit-book.js"></script>
+  </body>
+</html>
