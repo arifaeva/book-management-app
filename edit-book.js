@@ -14,6 +14,8 @@ const editForm = document.getElementById("editForm");
 const editTitle = document.getElementById("bookTitle");
 const editRating = document.getElementById("bookRating");
 const editCategory = document.getElementById("bookCategory");
+const editRead = document.getElementById("pageRead");
+const editTotal = document.getElementById("pageTotal");
 const editAuthor = document.getElementById("bookAuthor");
 const editYear = document.getElementById("bookYear");
 const editPublisher = document.getElementById("bookPublisher");
@@ -33,6 +35,8 @@ editForm.addEventListener("submit", async (event) => {
       title: editTitle.value,
       rating: editRating.value,
       category: editCategory.value,
+      pageread: editRead.value,
+      pagetotal: editTotal.value,
       author: editAuthor.value,
       year: editYear.value,
       publisher: editPublisher.value,
@@ -71,6 +75,8 @@ async function buildApp() {
   editTitle.value = book.title;
   editRating.value = book.rating;
   editCategory.value = book.category;
+  editRead.value = book.pageread;
+  editTotal.value = book.pagetotal;
   editAuthor.value = book.author;
   editYear.value = book.year;
   editPublisher.value = book.publisher;

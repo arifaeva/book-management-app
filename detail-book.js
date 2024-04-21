@@ -40,6 +40,11 @@ async function buildApp() {
   // const coverContainer = document.createElement("div");
   const bookCover = document.createElement("img");
   const category = document.createElement("h4");
+  const progressValue = document.createElement("h5");
+  const progressContainer = document.createElement("div");
+  const progress = document.createElement("div");
+  const progressPercent = document.createElement("p");
+  const boxProgress = document.createElement("div");
   const rating = document.createElement("h5");
   const bookRating = document.createElement("h3");
 
@@ -80,13 +85,52 @@ async function buildApp() {
     "m-auto",
     "bg-indigo-500"
   );
+  progress.textContent = "Your reading progress :";
+  progress.classList.add(
+    "text-center",
+    "text-white",
+    "font-inter",
+    "m-auto",
+    "pt-5",
+    "font-sm"
+  );
+  progressContainer.classList.add(
+    "w-full",
+    "bg-gray-400",
+    "rounded-full",
+    "h-2.5",
+    "dark:bg-gray-950"
+  );
+  progressValue.classList.add(
+    "bg-indigo-500",
+    "h-2.5",
+    "rounded-full",
+    "dark:bg-blue-500"
+  );
+  progressValue.style.width = `${(book.pageread * 100) / book.pagetotal}%`;
+  progressPercent.textContent = `${book.pageread} / ${book.pagetotal}`;
+  progressPercent.classList.add(
+    "text-xs",
+    "text-white",
+    "font-inter",
+    "w-20",
+    "text-center"
+  );
+  boxProgress.classList.add(
+    "flex",
+    "justify-between",
+    "items-center",
+    "m-auto",
+    "p-3",
+    "px-5",
+    "space-x-2"
+  );
   rating.textContent = "Your rating :";
   rating.classList.add(
     "text-center",
     "text-white",
     "font-inter",
     "m-auto",
-    "pt-5",
     "font-sm"
   );
   bookRating.textContent = `${book.rating}/5`;
@@ -124,7 +168,17 @@ async function buildApp() {
   metaContainer1.append(metaAuthor, metaYear, metaPublisher);
   metaContainer2.append(bookAuthor, yearBook, publisherBook);
   metaContainer.append(metaContainer1, metaContainer2);
-  firstContainer.append(bookCover, category, rating, bookRating);
+
+  progressContainer.append(progressValue);
+  boxProgress.append(progressContainer, progressPercent);
+  firstContainer.append(
+    bookCover,
+    category,
+    progress,
+    boxProgress,
+    rating,
+    bookRating
+  );
   secondContainer.append(bookTitle, metaContainer, descBook);
   bookContainer.append(firstContainer, secondContainer);
 }
